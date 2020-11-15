@@ -7,10 +7,65 @@ DDL(Data Definition Languages):
                              column_name_n column_type_n constraints); 
  --- desc tablename; --- show create table tablename; --- drop table tablename; 
  --- alter table tablename modify [column] column_definition 
-                                                    [first | after col_name]
- --- 
+                                                    [first | after col_name];
+ --- alter table tablename add [column] column_definition 
+                                                    [first | after col_name];
+ --- alter table tablename drop [column] col_name;
+ --- alter table tablename change [column] old_col_name column_definition;
+                                                    [first | after col_name];
+ --- alter table tablename rename [to] new_tablename; 
 
 DML(Data Manipulation Language):
+ --- insert into tablename (field1, field2, ... , fieldn) 
+                    value (value1, value2, ... , valuen);
+ --- update tablename set field1=value1, field2=value2, ... fieldn=valuen 
+                        where condition;
+ --- update t1, t2, ..., tn set t1.field1=expr1, tn.fieldn=exprn 
+                        where condition;
+ --- delete from tablename [where condition];
+ --- delete t1, t2, ..., tn from t1, t2, ..., tn [where condition];
+ --- select * from tablename [where condition];
+ --- select distinct col_name from tablename [where condition];
+ --- select * from tablename [where condition]
+                [order by field1 [desc | asc], field2 [desc | asc], 
+                                          ..., fieldn [desc | asc]];
+ --- select ... [limit offset_start, row_count];
+ --- select [field1, field2, ..., fieldn] fun_name from tablename
+        [where where_contition] 
+        [group by field1, field2, ..., fieldn [with rollup]]
+        [having where_contition];
+ --- select * from t1 union | union all select * from t2 
+                  ... union | union all select * from tn; 
 
 DCL(Data Control Language):
+ --- grant
+ --- revoke
+
+Data Type       Byte
+tinyint         1
+smallint        2
+mediumint       3
+int, integer    4
+bigint          8
+float           4
+double          8
+dec(m, d)       m+2
+bit(m)          1~8
+date            4
+datetime        8
+timestamp       4
+time            3
+year            1
+char(m)
+varchar(m)
+tinyblob
+blob
+mediumblob
+longblob
+tinytext
+text
+mediumtext
+longtext
+varbinary(m)
+binary(m)
 
