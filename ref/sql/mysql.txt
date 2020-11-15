@@ -1,0 +1,16 @@
+DDL(Data Definition Languages):
+ --- create database dbname; --- show databases; --- use dbname --- show tables; 
+ --- drop database dbname;
+ --- create table tablename (colum_name_1 column_type_1 constraints, 
+                             column_name_3 column_type_2 constraints, 
+                             ... 
+                             column_name_n column_type_n constraints); 
+ --- desc tablename; --- show create table tablename; --- drop table tablename; 
+ --- alter table tablename modify [column] column_definition 
+                                                    [first | after col_name]
+ --- 
+
+DML(Data Manipulation Language):
+
+DCL(Data Control Language):
+
