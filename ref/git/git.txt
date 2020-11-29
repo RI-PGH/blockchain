@@ -1,0 +1,22 @@
+git init
+git remote add origin [repository_url]
+git add [options] [path_to_files]
+git add -A
+git commit -m 'text'
+git rm [options] [path_to_files]
+git mv [options] [source] ... [destination]
+
+git clone [repository_url]
+git status
+git log [options] [version range] [path_to_file_or_directory] [version range]
+git log [hahs_1]..[hash_2]
+
+git branch b_name
+git diff -- [path_to_a_file_or_directory]
+git diff [commit_hash]  -- [path_to_a_file_or_directory]
+git diff --cached [commit_hash] [-- [path_to_a_file_or_directory]]
+git diff [commit_hash or branch_name] [commit_hash or branch_name]
+git diff [branch_A]...[branch_B]
+
+git push -u origin master
+
